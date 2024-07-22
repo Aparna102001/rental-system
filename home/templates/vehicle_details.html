@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vehicle Details</title>
+</head>
+<body>
+    <h1>Vehicle Details Confirmed</h1>
+    
+    <p>Name: {{ vehicle.name }}</p>
+    <p>Number: {{ vehicle.number }}</p>
+    <p>Driver: {{ vehicle.driver }}</p>
+    <p>Type: {{ vehicle.type }}</p>
+    <p>Fare: {{ vehicle.fare }}</p>
+    <p>Seats: {{ vehicle.seats }}</p>
+    <img src="{{vehicle.image.url}}" class="card-img-top" alt="...">
+    <p>Status: {% if vehicle.available %}Available{% else %}Booked{% endif %}</p>
+    {% if Vehicle.image %}
+    <img src="{{ vehicle.image.url }}" alt="{{ vehicle.name }} Image">
+    {% endif %}
+</body>
+</html>

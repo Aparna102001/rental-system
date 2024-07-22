@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- ... -->
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Confirmation Details</h1>
+                <p>Name: {{ vehicle.name }}</p>
+                <p>Registered Number: {{ vehicle.number }}</p>
+                <p>Driver: {{ vehicle.driver }}</p>
+                <p>Type: {{ vehicle.type }}</p>
+                <p>Fare: {{ vehicle.fare }}</p>
+                <p>Seats: {{ vehicle.seats }}</p>
+                <img src="{{vehicle.image.url}}" class="card-img-top" alt="...">
+                <!-- Display other vehicle confirmation details here -->
+                <a href="{% url 'index' %}"<button type="submit" class="btn btn-primary float-right mt-5"style="background-color:pink" >Go To Home</button></a>
+            
+            </div>
+        </div>
+    </div>
+</body>
+</html>

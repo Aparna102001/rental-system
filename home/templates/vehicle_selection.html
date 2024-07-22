@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- ... -->
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <form method="post" action="{% url 'vehicle_selection' %}">
+                {% csrf_token %}
+                <label for="selected_name">Select a vehicle name:</label>
+                <select name="selected_name" id="selected_name">
+                    {% for vehicle in vehicles %}
+                        <option value="{{ vehicle.name }}">{{ vehicle.name }}</option>
+                    {% endfor %}
+                </select>
+                <button type="submit">View Details</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

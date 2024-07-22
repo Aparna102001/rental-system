@@ -1,0 +1,44 @@
+body {
+    background: darkcyan;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color:darkcyan;
+}
+
+.profile-button {
+    background: darkcyan;
+    box-shadow: none;
+    border: none
+}
+
+.profile-button:hover {
+    background: darkcyan;
+}
+
+.profile-button:focus {
+    background: darkcyan;
+    box-shadow: none
+}
+
+.profile-button:active {
+    background: darkcyan;
+    box-shadow: none
+}
+
+.back:hover {
+    color: darkcyan;
+    cursor: pointer
+}
+
+.labels {
+    font-size: 11px
+}
+
+.add-experience:hover {
+    background: darkcyan;
+    color: #fff;
+    cursor: pointer;
+    border: solid 1px darkcyan;
+}

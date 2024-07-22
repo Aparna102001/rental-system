@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+    <title>travel</title>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <style>
+        .card{
+            margin:auto;
+            border:solid 10px #dbdad7; 
+            width:191%; 
+            padding-left:100px!important;
+            padding-bottom:10px!important;
+            padding-right:100px!important;
+            padding-top: 0px!important;
+            
+          }
+          
+          .card-title{
+            margin:auto;
+            padding:15px;
+            background-color: darkcyan;
+            color: white;
+            width:80%;
+          }
+          
+          div.card-body{
+            padding:100px;
+            
+            
+          }
+          .custom-select{
+            width:100%;
+          }
+          
+          .btn2{
+            margin-left:10%;
+          }
+          input {
+            outline: 0!important;
+            border-width: 0 0 2px!important;
+            border-color: #d1d1cf!important;
+          }
+          input:focus {
+            border-color: #d1d1cf!important;
+           -webkit-box-shadow: none!important;
+            box-shadow: none!important;
+          }
+          
+          select{
+          
+           outline: 0!important;
+            border-width: 0 0 2px!important;
+            border-color: #d1d1cf!important;
+          }
+          
+          select:focus{
+              border-color: #d1d1cf!important;
+           -webkit-box-shadow: none!important;
+            box-shadow: none!important;
+          }
+          
+          .radiobtn{
+            margin-left: 3.5%;
+          }
+          
+          .icons{
+            margin:auto!important;
+          
+          }
+          
+          .fa{
+            border-radius: 25px;
+            width: 10%;
+            margin-left: 5%;
+            border:solid 2px #dbdad7;
+            margin-top:5%;
+            text-align: center;
+          }
+          
+          .fa-plane{
+            color:#1cad9f;
+          }
+          
+          .fa-taxi{
+            color: #c2f700;
+          }
+          
+          .fa-train{
+            color:red;
+          }
+          
+          @media only screen and (max-width: 600px) {
+            .card{
+              margin:auto;
+              border:solid 1px #dbdad7;
+              width:90%;
+              padding-left:10px!important;
+              padding-bottom:10px!important;
+              padding-right:10px!important;
+              padding-top: 0px!important;
+            
+            }
+          
+            .fa{
+              border-radius: 25px;
+              width: 15%;
+              margin-left: 5%;
+              border:solid 2px #dbdad7;
+              margin-top:5%;
+              text-align: center;
+            }
+          }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <class="container-fluid">
+              <a style="font-family:Georgia, 'Times New Roman', Times, serif;font-size:20px; position: relative;left: 30px;"  class="navbar-brand" href="#">
+                 <img  src="https://media.istockphoto.com/id/942839478/vector/travel-icon.jpg?s=612x612&w=0&k=20&c=ZNKayQy-EGmiH1leZcQyyRvhV2caq0zSlZwRRwh4OJw=" alt="Logo" width="100" height="80" class="d-inline-block align-text-center">
+                DriveAway
+              </a>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--Card-->
+<div class="card shadow mb-5 bg-white rounded">
+
+	<!--Card-Body-->
+	<div class="card-body">
+
+		<!--Card-Title-->
+		<p class="card-title text-center shadow mb-5 rounded">Travel Booking Form</p>
+ 
+ 
+
+    <hr>
+
+		<p class="searchText"><strong>Search For Cheap Flights</strong></p>
+
+		<!--First Row-->
+    <form action="" method="post">
+      {% csrf_token %}
+		<div class="row mb-3 mt-3">
+
+			<label class="radiobtn"><input type="radio" name="oneway" >One Way</label>
+			<label class="radiobtn"><input type="radio" name="roundtrip" >Round Trip</label>
+
+		</div>
+
+
+		<!--Second Row-->
+		<div class="row">
+
+			<div class="col-sm-6">
+				<select class="browser-default custom-select mb-4" name="fro">
+        <option value="" disabled="" selected="">From </option>
+        <option value="New Delhi">New Delhi</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Bangalore">Bangalore</option>
+    </select>
+			</div>
+
+			<div class="col-sm-6">
+				<select class="browser-default custom-select mb-4" name="to">
+        <option value="T" disabled="" selected="">To </option>
+       <option value=" New Delhi">New Delhi</option>
+        <option value="Mumbai ">Mumbai</option>
+        <option value="Bangalore ">Bangalore</option>
+    </select>
+			</div>
+
+		</div>
+
+
+		<!--Third Row-->
+		<div class="row">
+
+			<div class="col-sm-6">
+        <label for="date1">Pickup Date</label>
+				<input  type="date" name="date1" class="form-control datepicker mb-4" style="font-family:Arial, FontAwesome" >
+			</div>
+
+				<div class="col-sm-6">
+          <label for="date2">Dropoff Date</label>
+					<input  type="date" name="date2" class="form-control datepicker" style="font-family:Arial, FontAwesome" >
+			</div>
+
+				</div>
+
+
+				<!--Fourth Row-->
+				<div class="row mt-4">
+
+					<div class="col-sm-6">
+						<select class="browser-default custom-select mb-4" name="pickup">
+        <option value="" disabled="" selected="">Pickup Time</option>
+        <option value="00:00">6:00 AM</option>
+        <option value="00:00">3:00 PM</option>
+        <option value="00:00">6:00 PM</option>
+    </select>
+					</div>
+
+					<div class="col-sm-6">
+						<select class="browser-default custom-select mb-4" name="dropoff">
+        <option value="" disabled="" selected="">Dropoff Time</option>
+          <option value="00:00">6:00 AM</option>
+        <option value="00:00">3:00 PM</option>
+        <option value="00:00">6:00 PM</option>
+    </select>
+					</div>
+
+				</div>
+
+
+
+
+				<!--Fifth Row-->
+				<div class="row">
+
+					<div class="col-sm-4">
+						<select class="browser-default custom-select mb-4" name="kid">
+        <option value="" disabled="" selected="">Kids(0-14)</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+    </select>
+					</div>
+
+					<div class="col-sm-4">
+						<select class="browser-default custom-select mb-4" name="adult">
+        <option value="" disabled="" selected="">Adults(15-64)</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        
+    </select>
+					</div>
+
+					<div class="col-sm-4">
+		<select class="browser-default custom-select mb-4" name="senior">
+        <option value="" disabled="" selected="">Seniors(65+)</option>
+        <option value="1">1</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+    </select>
+					</div>
+
+
+
+				</div>
+
+				<button type="submit" class="btn btn-primary float-right mt-5"style="background-color:darkcyan">Find Vehicle</button>
+			</div>
+		</div>
+  </form>
+  </body>
+  </html>
